@@ -1,0 +1,26 @@
+Results from the runtime.js functions
+
+extraLargeArray - 
+doubler insert - 415.8777 ms
+doubler append - 3.0453 ms
+
+LargeArray - 
+doubler insert - 4.4648 ms
+doubler append - 707.5 μs
+
+mediumArray - 
+doubler insert - 158.6 μs
+doubler append - 278.5 μs
+
+smallArray - 
+doubler insert - 50.4 μs
+doubler append - 130.7 μs
+
+tinyArray -
+doubler insert - 38.2 μs
+doubler append - 83.2 μs
+
+for the smaller arrays the difference is literally millionths of a second but the insert (unshift) does show to be faster, but as you get larger and larger arrays the insert (unshift) method get quick a bit slower than the append (push) method. and will continue to get slower the bigger the array gets
+
+Both functions have the same end result and a runtime complexity of O(n), they both use for loops to loop through the given array and mutiplies each iteration by 2, and then adds that value to another array, but each function uses a different method to add that value to the new array: push or unshift. The doublerInsert function uses the unshift method to add the va;ue to the new array, while doublerAppend uses push. The insert (unshift) method takes longer becasue every new number we add to the array the code has to reassign the index of every number in the array because we are adding the new number to the beginning of the array. The append (push) method adds the new number to the end of the array so the code only has to assign one new index. all in all the append method will be faster than the insert method.
+
